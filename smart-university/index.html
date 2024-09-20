@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>smart university</title>
+        <!--Font Awesome CDN-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="image.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+<body>
+     <ul>
+        <li><a href="#">Home</a></li>
+       
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+
+        
+        <li style="float: right;"><a href="attendance/" >Attendance</a></li>
+        <!-- <li  style="float: right;"><a href="Signup.html">Signup</a></li> -->
+        <li style="float: right;"><a href="student_mart/" >Shop</a></li>
+        <li style="float: right;"><a href="pythonFace_Rec/" >faceRecognition</a></li>
+      </ul>
+    <div class="container">
+
+        <div class="slide">
+            <div class="item" style="background-image: url(images1.jpg);">
+                <div class="content">
+                    <div class="name">Classroom</div>
+                    <div class="des">Coducive Learning Environment</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(download.jpg);">
+                <div class="content">
+                    <div class="name">Science</div>
+                    <div class="des">Access To New Scientific Discoveries </div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(download1.jpg);">
+                <div class="content">
+                    <div class="name">Easy</div>
+                    <div class="des">Study and Learn with ease Remotely</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images3.jpg);">
+                <div class="content">
+                    <div class="name">Network</div>
+                    <div class="des">Network with other students from various fields of learning</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <!-- <div class="item" style="background-image: url(download2.jpg);">
+                <div class="content">
+                    <div class="name">Ireland</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div> -->
+
+        </div>
+
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">DISCLAIMER</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              This Student Shopping Mart is a simulated project created for educational purposes only. All products, prices, and services featured in this project are fictional and intended solely for the purpose of demonstrating and practicing e-commerce concepts and technologies. 
+      This project is not affiliated with, endorsed by, or representative of any real-world retail company. Users should not attempt to make actual purchases through this platform, as no transactions will be processed, and no products or services will be delivered.
+      Any similarities to real businesses, products, or services are purely coincidental. The creators of this project are not liable for any misunderstandings, misuse, or misinterpretation of the content provided. All data, including customer information and transaction details, is entirely fictional and should not be treated as real.
+      By interacting with this platform, users acknowledge that it is a mock-up and agree not to use it for any real-world financial activities.
+      
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="popup-yes">Accept</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <script src="image.js"></script>
+
+    <script>
+        function showPopup(){
+       if(localStorage.getItem('YesBtn') !== 1){
+        setTimeout(() => {
+          $('#exampleModal').modal('show');
+          $('#popup-yes').on('click', function(){
+            localStorage.setItem('YesBtn', 1);
+            $('#exampleModal').modal('hide');
+          })
+        }, 2000);
+       }
+      }
+      
+        showPopup();
+      
+      
+      
+      </script>
+          <!-- Optional JavaScript -->
+          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
